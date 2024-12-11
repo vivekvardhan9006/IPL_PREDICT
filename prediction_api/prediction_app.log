@@ -1,0 +1,13 @@
+2024-12-09 10:01:15,102 - h5py._conv - DEBUG - Creating converter from 3 to 5
+2024-12-09 10:01:15,307 - absl - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-12-09 10:01:16,459 - absl - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-12-09 10:01:16,465 - __main__ - ERROR - Error loading models or preprocessing objects: [Errno 2] No such file or directory: 'label_encoders_3.pkl'
+2024-12-09 10:01:16,466 - __main__ - ERROR - Traceback (most recent call last):
+  File "D:\ReactWebSite2.0\prediction_api\app.py", line 40, in <module>
+    'label_encoders': joblib.load('label_encoders_3.pkl')  # Updated filename
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tirup\AppData\Roaming\Python\Python312\site-packages\joblib\numpy_pickle.py", line 650, in load
+    with open(filename, 'rb') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'label_encoders_3.pkl'
+
