@@ -1,0 +1,120 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: initial;
+}
+
+.screen-container {
+  min-height: 100vh;
+  height: auto;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #f6f8f9 0%, #e5ebee 100%);
+  font-family: 'Arial', sans-serif;
+  padding-bottom: 2rem;
+}
+
+.predict-form-container {
+  width: 100%;
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 2.5rem;
+  background-color: rgba(0,0,0,0.31);
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  flex-grow: 1;
+}
+
+.predict-form-container:hover {
+  box-shadow: 0 15px 35px rgba(11, 14, 15, 0.15);
+  transform: translateY(-5px);
+}
+
+.form-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #4ab3b3;
+  text-align: center;
+  margin-bottom: 2rem;
+  letter-spacing: -0.5px;
+}
+
+.predict-form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.form-group label {
+  display: block;
+  font-size: 16px;
+  color: #0d0e0e;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #3a9da6;
+  box-shadow: 0 0 0 3px rgba(58, 157, 166, 0.1);
+}
+
+.predict-button {
+  background-color: #3a9da6;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 0.875rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: auto;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.predict-button:hover {
+  background-color: #2a8d95;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(58, 157, 166, 0.4);
+}
+
+.prediction-result,
+.error-message {
+  margin-bottom: 1.5rem;
+  padding: 1.25rem;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.prediction-result {
+  background-color: rgba(127, 224, 221, 0.979);
+  border: 1px solid #3a9da6;
+  color: #2c7a8b;
+}
+
+.error-message {
+  background-color: rgba(220, 53, 69, 0.075);
+  color: #dc3545;
+  border: 1px solid #dc3545;
+}

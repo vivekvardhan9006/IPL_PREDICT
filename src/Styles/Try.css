@@ -1,0 +1,164 @@
+/* Main container for the signin form */
+.signin-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+  }
+  
+  /* Fade-in animation for the form */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-fadein {
+    animation: fadeIn 0.8s ease-in-out;
+  }
+  
+  .signin-form {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .signin-form h1 {
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #333;
+  }
+  
+  .signin-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  
+  .signin-form input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .error-message {
+    color: #d9534f;
+    margin-bottom: 1rem;
+  }
+  
+  .success-message {
+    color: #5cb85c;
+    margin-bottom: 1rem;
+  }
+  
+  .login-button {
+    display: inline-block;
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .login-button:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+  }
+  
+  /* Spinner for loading state */
+  .spinner {
+    width: 20px;
+    height: 20px;
+    border: 3px solid #fff;
+    border-top: 3px solid #007bff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: auto;
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+  }
+  
+  .login_b0x {
+    background: #fff;
+    padding: 2rem;
+    margin-top: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .login-header {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .input_box {
+    margin-bottom: 1rem;
+  }
+  
+  .input-field {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .input-submit {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .input-submit:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+  }
+  
+  .error-message {
+    color: #d9534f;
+    margin-top: -0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .success-message {
+    color: #5cb85c;
+    margin-top: -0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  

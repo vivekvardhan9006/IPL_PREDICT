@@ -1,0 +1,130 @@
+/* General Screen Container with Background */
+.screen-container {
+  position: relative;
+  max-height: 100vh;
+  overflow-y: auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  /* Add background image here directly */
+  background-image: url('../Assets/venueimg.jpg'); /* Check path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Keeps the image fixed while scrolling */
+}
+
+/* Remove background image div if unnecessary */
+.background-image {
+  display: none; /* Remove this element */
+}
+
+/* Venue Container with Grid Layout */
+.venue-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+/* Individual Venue Card */
+.venue {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 15px 20px;
+  margin: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: 500;
+  color: #333;
+  letter-spacing: 0.5px;
+  font-family: 'Georgia', 'Times New Roman', Times, serif;
+}
+
+.venue:hover {
+  background-color: #f0f8ff;
+  border-color: #007bff;
+  box-shadow: 0 6px 12px rgba(0, 123, 255, 0.2);
+  transform: translateY(-3px);
+}
+
+.venue.selected {
+  background-color: rgba(33, 174, 176, 0.8);
+  color: white;
+  border-color: rgba(33, 174, 176, 0.8);
+  box-shadow: 0 6px 12px rgba(33, 174, 176, 0.3);
+  transform: scale(1.03);
+}
+
+/* Selected Venue Display */
+.selected-venue {
+  margin-top: 30px;
+  text-align: center;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.selected-venue-name {
+  font-size: 20px;
+  font-weight: bold;
+  color: #007bff;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+
+/* Confirm Button */
+#confirmButton {
+  background: linear-gradient(90deg, #007bff, #0056b3);
+  border: none;
+  color: white;
+  padding: 12px 25px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#confirmButton:hover {
+  background: linear-gradient(90deg, #0056b3, #004494);
+  box-shadow: 0 6px 12px rgba(0, 123, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+#confirmButton:active {
+  transform: scale(0.97);
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .venue-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+  }
+
+  .venue {
+    padding: 10px 15px;
+  }
+
+  #confirmButton {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
